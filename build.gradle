@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'xyz.jpenilla.run-paper' version '3.0.2'
+}
+
+group = project.property('group')
+version = project.property('version')
+
+ext {
+    paperApiVersion = '1.21-R0.1-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+}
+
+dependencies {
+    compileOnly "io.papermc.paper:paper-api:${paperApiVersion}"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+    def props = [version: version]
+    inputs.properties props
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
+tasks.named('jar') {
+    archiveBaseName.set('LagMachinesServer')
+    archiveVersion.set(version.toString())
+}
+
+tasks.named('runServer') {
+    minecraftVersion('1.21.4')
+}
+
+tasks.register('buildPlugin') {
+    dependsOn 'jar'
+    doLast {
+        println "Готовый jar: ${tasks.jar.archiveFile.get().asFile}"
+    }
+}

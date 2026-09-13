@@ -1,0 +1,24 @@
+name: LagMachinesServer
+version: '${version}'
+main: ru.awtps.AWtps
+api-version: '1.21'
+author: AbuzzWorld
+description: Защита Minecraft сервера от лаг-машин, мониторинг TPS и автоматическое устранение нагрузки
+
+commands:
+  awtps:
+    description: Управление плагином AWtps
+    usage: /awtps <reload|report|unthrottle>
+    permission: awtps.admin
+    permission-message: "&cУ вас нет прав на использование этой команды."
+
+permissions:
+  awtps.tps:
+    description: Позволяет использовать /tps
+    default: true
+  awtps.notify:
+    description: Получать уведомления о лагах в чат
+    default: op
+  awtps.admin:
+    description: Доступ к административным командам плагина
+    default: op

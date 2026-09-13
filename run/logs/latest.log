@@ -1,0 +1,9 @@
+[23:01:54] [ServerMain/INFO]: [bootstrap] Running Java 21 (Java HotSpot(TM) 64-Bit Server VM 21.0.11+9-LTS-211; Oracle Corporation null) on Windows 11 10.0 (amd64)
+[23:01:54] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-232-ver/1.21.4@12d8fe0 (2025-06-09T10:15:42Z) for Minecraft 1.21.4
+[23:01:55] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[23:01:55] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'C:\Users\bee09\IdeaProjects\AWtps\build\libs\LagMachinesServer-1.0.0.jar'...
+[23:01:55] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'C:\Users\bee09\IdeaProjects\AWtps\build\libs\LagMachinesServer-1.0.0.jar' in 440ms.
+[23:01:56] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[23:01:56] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - LagMachinesServer (1.0.0)
+[23:02:00] [ServerMain/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
